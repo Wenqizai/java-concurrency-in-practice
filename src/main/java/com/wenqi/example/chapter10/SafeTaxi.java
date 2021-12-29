@@ -1,4 +1,4 @@
-package com.wenqi.example.chapter10.item1;
+package com.wenqi.example.chapter10;
 
 import net.jcip.annotations.GuardedBy;
 import net.jcip.annotations.ThreadSafe;
