@@ -1,9 +1,7 @@
 package com.wenqi.example.chapter5;
 
-import com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader;
-import javafx.concurrent.Task;
-
 import java.util.concurrent.BlockingQueue;
+import javafx.concurrent.Task;
 
 /**
  * @author liangwenqi
