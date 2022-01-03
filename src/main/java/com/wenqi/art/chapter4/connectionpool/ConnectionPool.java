@@ -1,4 +1,4 @@
-package com.wenqi.art.chapter4;
+package com.wenqi.art.chapter4.connectionpool;
 
 import java.sql.Connection;
 import java.util.LinkedList;
@@ -30,6 +30,7 @@ public class ConnectionPool {
 
     /**
      * 在mills内无法获取到连接, 将返回null
+     *
      * @param mills
      * @return
      * @throws InterruptedException
@@ -45,6 +46,7 @@ public class ConnectionPool {
             } else {
                 long future = System.currentTimeMillis() + mills;
                 long remaining = mills;
+
                 while (pool.isEmpty() && remaining > 0) {
                     pool.wait(remaining);
                     remaining = future - System.currentTimeMillis();
