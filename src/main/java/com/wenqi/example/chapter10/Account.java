@@ -3,6 +3,8 @@ package com.wenqi.example.chapter10;
 import sun.reflect.generics.tree.VoidDescriptor;
 
 import java.math.BigDecimal;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author liangwenqi
@@ -10,6 +12,7 @@ import java.math.BigDecimal;
  */
 public class Account {
     private BigDecimal balance = new BigDecimal("1000000");
+    public Lock lock = new ReentrantLock(false);
 
     public void debit(BigDecimal amount) {}
 
